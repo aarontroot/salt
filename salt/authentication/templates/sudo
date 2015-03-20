@@ -1,0 +1,19 @@
+# This file is managed by Salt, do not make changes locally
+# /srv/salt/authentication/files/sudo.default
+#%PAM-1.0
+
+{% if auth == "default" -%}
+auth       required   pam_env.so readenv=1 user_readenv=0
+auth       required   pam_env.so readenv=1 envfile=/etc/default/locale user_readenv=0
+@include common-auth
+@include common-account
+@include common-session-noninteractive
+{% elif auth == "kerberos" or auth == "securid" -%}
+auth      sufficient  pam_krb5.so
+account   required    pam_permit.so
+password  sufficient  pam_unix.so
+session   optional    pam_keyinit.so  revoke
+session   required    pam_limits.so
+{% endif %}
+
+# vim: syntax=python
