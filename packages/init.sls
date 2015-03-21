@@ -2,8 +2,7 @@
 packages:
     pkg.latest:
         - pkgs:
-            - nagios-nrpe-server
-            - nagios-plugins
+            - git
             - sudo
             - tmux
             - tree
