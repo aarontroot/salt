@@ -1,6 +1,7 @@
 # vim: syntax=yaml ts=4 expandtab
 packages:
-    pkg.latest:
+    pkg:
+        - latest
         - pkgs:
             - git
             - sudo
