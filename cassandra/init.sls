@@ -1,4 +1,4 @@
-cassandra
+cassandra:
     pkgrepo.managed:
         - humanname: Apache Cassandra Repo
         - name: deb http://www.apache.org/dist/cassandra/debian 21x main
