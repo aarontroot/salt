@@ -1,5 +1,5 @@
 cassandra:
-    pkg.latest
+    pkg.latest:
         - name: python-software-properties
 
     pkgrepo.managed:
