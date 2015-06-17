@@ -10,3 +10,8 @@ cassandra:
         - keyserver: pgp.mit.edu
         - require:
             - pkg: python-software-properties
+
+    pkg.latest:
+        - name: cassandra
+        - require:
+            - pkgrepo: cassandra
